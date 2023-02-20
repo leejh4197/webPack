@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "react-manual-toolchain",
+  "version": "1.0.0",
+  "description": "React 매뉴얼 툴체인 구성",
+  "scripts": {
+    "webpack:config": "webpack --target=browserslist --entry=./src/main.js --output-path=public",
+    "webpack:dev": "npm run webpack:config -- --mode=development",
+    "webpack:prod": "npm run webpack:config -- --mode=production",
+    "start": "npm run server -- --open",
+    "dev": "npm run server",
+    "server": "webpack server -c webpack/dev.js",
+    "bundle": "webpack bundle -c webpack/dev.js",
+    "build": "webpack build -c webpack/prod.js"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "eslint",
+    "prettier",
+    "babel",
+    "typescript",
+    "jest",
+    "testing-library",
+    "sass",
+    "postcss",
+    "svgr"
+  ],
+  "author": {
+    "name": "yamoo9",
+    "email": "yamoo9@euid.dev"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
